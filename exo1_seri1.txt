@@ -1,0 +1,79 @@
+Select libtype 
+from Type;
+
+Select  distinct design, ville
+from client;
+
+select Mle, codpro, compet
+from ing_pro_cpc
+where mle between 25 and 1220;
+
+select distinct ville
+from dept
+order by ville;
+
+select design, ville
+from client
+order by ville;
+
+select codpro, libpro, cout
+from projet
+order by cout desc;
+
+select codpro, libpro
+from projet
+where cout>10000000;
+
+select codpro, libpro, adresse
+from projet
+where adresse like '%Brokleen%';
+
+select nom
+from ingenieur
+where nom like 'S%';
+
+
+select distinct mle, codpro
+from affect
+where mle between 501 and 1000 
+and (codpro=17 or codpro=22 or codpro=120)
+and datfin is NULL;
+
+select codpro, cout as cout_HT, cout*(1-0.196) as cout_TTC
+from projet
+where codpro between 11 and 20;
+
+
+
+select mle, nom, prenom
+from ingenieur
+where mle between 25 and 8900;
+
+select distinct pdg, dg
+from dept
+order by pdg;
+
+
+select mle
+from emploi
+where codept = 7
+and datsor is null
+order by mle;
+
+select sexe, prenom
+from ingenieur
+order by sexe, prenom;
+
+
+
+select sexe, prenom
+from ingenieur
+order by sexe, prenom;
+
+select codept, design, pdg
+from dept
+where adresse like "%rue de Londres%"
+and ville='PARIS';
+
+
+
